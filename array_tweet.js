@@ -10,3 +10,8 @@ tweets.forEach(appendTweet);
 
 tweetsHTML += "</ul>";
 document.querySelector("#answer").innerHTML = tweetsHTML;
+
+function onClickButton(){
+    
+
+}
