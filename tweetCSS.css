@@ -1,18 +1,27 @@
-#answer img {
-  height: 100px;
-  width: 70px;
-
-}
-
 li {
   border: solid 1px #1d1d1a;
+  list-style: none;
+  margin: -1px 0;
 }
 
-.Image, .Text{
-  display : inline-block;
+b{
+  margin: 10px 0;
 }
 
-.TweetBox-Text{
-  display : inline-block;
+.ImgBox,
+.TextBox{
+  display:inline-block;
+}
 
+.ImgBox {
+  /*float: left;*/
+  width: 100px;
+  margin: 10px 20px 10px 10px;
+  border: #242424 solid 2px;
+}
+
+.TextBox{
+  /*float: right;*/
+  vertical-align: top;
+  margin-top: 10px;
 }
