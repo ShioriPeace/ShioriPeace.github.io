@@ -2,7 +2,7 @@
     response => {
         return response.json();
     }
-).*/ //先生
+).*/
 
 fetch("https://sheets.googleapis.com/v4/spreadsheets/1bULwtvSec8ZKUiJZ8qvPVgKpX0wGKKQXk7wekoP4lbo/values/data?key=AIzaSyAHmMpbMqePjuQXzThfIjZ4zAFkwaFHxTE").then(
     response => {
