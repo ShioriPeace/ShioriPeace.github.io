@@ -21,22 +21,22 @@ fetch("https://sheets.googleapis.com/v4/spreadsheets/1bULwtvSec8ZKUiJZ8qvPVgKpX0
 
         html = "</ul>";*/
 
-       /* let html = `    <div class="col-4">
-      <div class="card mx-auto" style="width: 18rem;">
-        <img class="card-img-top" src="octnalAudio.png" alt="カードの画像">
-        <div class="card-body">
-          <h5 class="card-title">OCTNAL AUDIO TABLE</h5>
-          <p class="card-text">CDを机に置くだけで音楽プレーヤーのように再生できるIoTデバイス</p>
-          <a href="#" class="btn btn-primary">詳しくはこちら</a>
-        </div>
-      </div>
-    </div>`;*/
+        /* let html = `    <div class="col-4">
+       <div class="card mx-auto" style="width: 18rem;">
+         <img class="card-img-top" src="octnalAudio.png" alt="カードの画像">
+         <div class="card-body">
+           <h5 class="card-title">OCTNAL AUDIO TABLE</h5>
+           <p class="card-text">CDを机に置くだけで音楽プレーヤーのように再生できるIoTデバイス</p>
+           <a href="#" class="btn btn-primary">詳しくはこちら</a>
+         </div>
+       </div>
+     </div>`;*/
 
-        let JsonCard = "<ul>";
+        let JsonCard = "";
         json.values.forEach(row => {
             JsonCard += `<div class="col-4">
       <div class="card mx-auto" style="width: 18rem;">
-        <img class="card-img-top" src= "http://${row[3]}" alt="カードの画像">
+        <img class="card-img-top" src= "${row[3]}" alt="カードの画像">
         <div class="card-body">
           <h5 class="card-title">${row[0]}</h5>
           <p class="card-text">${row[1]}</p>
@@ -45,14 +45,27 @@ fetch("https://sheets.googleapis.com/v4/spreadsheets/1bULwtvSec8ZKUiJZ8qvPVgKpX0
       </div>
     </div>`;
 
-           // JsonCard += `<li><div class="row"><div class="col-4"><div class="card mx-auto" style="width: 18rem;"><div class="card-img-top"><img src="http://${row[3]}" alt="">
+            // JsonCard += `<li><div class="row"><div class="col-4"><div class="card mx-auto" style="width: 18rem;"><div class="card-img-top"><img src="http://${row[3]}" alt="">
             // <div class="card-title">${row[0]}</div></div></div></div></li>`
         });
 
-        JsonCard += "</ul>";
+
         document.querySelector("#contents").innerHTML = JsonCard;
-    }
-);
+
+        let SlidePhoto = "";
+        json.values.forEach(row =>{
+            SlidePhoto += `<div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="d-block w-100" src= "${row[4]}" >
+      </div>
+       </div>`
+
+        });
+
+        document.querySelector("#contents").innerHTML = SlidePhoto;
+    });
+
+
 
 /*let card = `<div class="col-4">
       <div class="card mx-auto" style="width: 18rem;">
