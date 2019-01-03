@@ -36,7 +36,7 @@ fetch("https://sheets.googleapis.com/v4/spreadsheets/1bULwtvSec8ZKUiJZ8qvPVgKpX0
         json.values.forEach(row => {
             JsonCard += `<div class="col-4">
       <div class="card mx-auto" style="width: 18rem;">
-        <img class="card-img-top" src="${row[2]}" alt="カードの画像">
+        <img class="card-img-top" src="${row[3]}" alt="カードの画像">
         <div class="card-body">
           <h5 class="card-title">${row[0]}</h5>
           <p class="card-text">${row[1]}</p>
@@ -54,8 +54,12 @@ fetch("https://sheets.googleapis.com/v4/spreadsheets/1bULwtvSec8ZKUiJZ8qvPVgKpX0
 
         let SlidePhoto = "";
         json.values.forEach(row =>{
-            SlidePhoto += `<div class="carousel-inner">
-        <img class="d-block w-100" src= "${row[4]}" >
+            SlidePhoto += `<div class="carousel">
+        <div class="carousel-inner">
+      <div class="carousel-item">
+        <img class="d-block w-100" src="${row[4]}">
+      </div>
+      </div>
       </div>`
 
         });
