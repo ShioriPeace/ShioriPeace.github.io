@@ -54,15 +54,15 @@ fetch("https://sheets.googleapis.com/v4/spreadsheets/1bULwtvSec8ZKUiJZ8qvPVgKpX0
 
         let SlidePhoto = "";
         json.values.forEach(row =>{
-            SlidePhoto += `<div class="carousel">
-        <div class="carousel-inner">
+            SlidePhoto += `
       <div class="carousel-item">
         <img class="d-block w-100" src="${row[4]}">
       </div>
-      </div>
-      </div>`
+     `
 
         });
+
+        document.querySelector("#slidecontents").innerHTML = SlidePhoto;
 
     });
 
