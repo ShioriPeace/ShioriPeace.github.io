@@ -40,7 +40,7 @@ fetch("https://sheets.googleapis.com/v4/spreadsheets/1bULwtvSec8ZKUiJZ8qvPVgKpX0
         <div class="card-body">
           <h5 class="card-title">${row[0]}</h5>
           <p class="card-text">${row[1]}</p>
-          <a href="#" class="btn btn-primary">詳しくはこちら</a>
+          <a href="${row[2]}" class="btn btn-primary">詳しくはこちら</a>
         </div>
       </div>
     </div>`;
@@ -53,9 +53,13 @@ fetch("https://sheets.googleapis.com/v4/spreadsheets/1bULwtvSec8ZKUiJZ8qvPVgKpX0
         document.querySelector("#contents").innerHTML = JsonCard;
 
         let SlidePhoto = "";
-        json.values.forEach(row =>{
+        json.values.forEach((row, index) =>{
+            let divClass = "carousel-item";
+            if(index === 1){
+                divClass += " active";
+            }
             SlidePhoto += `
-      <div class="carousel-item">
+      <div class="${divClass}">
         <img class="d-block w-100" src="${row[4]}">
       </div>
      `
