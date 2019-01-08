@@ -70,6 +70,10 @@ fetch("https://sheets.googleapis.com/v4/spreadsheets/1bULwtvSec8ZKUiJZ8qvPVgKpX0
 
     });
 
+/*function MouseOverJyoshi(){
+    document.querySelector("#jyoshiryoku").innerHTML = "あいうえお";
+}*/
+
 
 
 /*let card = `<div class="col-4">
