@@ -60,7 +60,7 @@ fetch("https://sheets.googleapis.com/v4/spreadsheets/1bULwtvSec8ZKUiJZ8qvPVgKpX0
             }
             SlidePhoto += `
       <div class="${divClass}">
-        <img class="d-block w-100" src="${row[4]}">
+        <img class="d-block w-100" src="${row[4]}" width:700px >
       </div>
      `
 

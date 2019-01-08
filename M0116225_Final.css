@@ -106,7 +106,18 @@ body {
 }
 
 /*スライドショー*/
-.carousel-indicators{
- background-color: deeppink;
+.carousel-indicators li{
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: #0000aa;
 }
+
+.carousel-inner{
+  width: 70%;
+  height: 70%;
+  margin: 0 auto;
+}
+
+
 
