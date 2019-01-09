@@ -110,7 +110,11 @@ body {
   border-radius: 50%;
   width: 20px;
   height: 20px;
-  background-color: #0000aa;
+  background-color: #FCF8DE;
+}
+
+.carousel-indicators .active{
+  background-color: #F1DB4B;
 }
 
 .carousel-inner{
@@ -125,5 +129,10 @@ body {
   margin: 0 auto;
 }
 
+.FormImg{
+  width: 50%;
+  height: 50%;
+  margin: 0 auto;
+}
 
 

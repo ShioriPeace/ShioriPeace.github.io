@@ -76,6 +76,7 @@ fetch("https://sheets.googleapis.com/v4/spreadsheets/1bULwtvSec8ZKUiJZ8qvPVgKpX0
 
 
 
+
 /*let card = `<div class="col-4">
       <div class="card mx-auto" style="width: 18rem;">
         <img class="card-img-top" src="iroiro_320.jpg" alt="カードの画像">
