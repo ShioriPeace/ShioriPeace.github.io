@@ -134,5 +134,22 @@ body {
   height: 50%;
   margin: 0 auto;
 }
+.ContactButton{
+  display: inline-block;
+  color: #ffffff;
+  background: orangered;
+  padding: 15px 30px;
+  text-decoration: none;
 
+  border-radius: 5px;
+}
 
+.ContactButton:hover{
+  background: #fff;
+  color: #F25F70;
+}
+
+.main{
+  font-family: 'Kosugi Maru', sans-serif;
+  text-align: center;
+}
