@@ -10,6 +10,7 @@ body {
 }
 
 .menu {
+  font-family: "M PLUS Rounded 1c";
   display: block;
   overflow: hidden;
   width: 60px;
